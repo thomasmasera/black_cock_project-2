@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+</head>
+<body>
+    <div class="griglia">
+        <div class="cella" id="1"></div>
+        <div class="cella" id="2"></div>
+        <div class="cella" id="3"></div>
+        <div class="cella" id="4"></div>
+        <div class="cella" id="5"></div>
+        <div class="cella" id="6"></div>
+        <div class="cella" id="7"></div>
+        <div class="cella" id="8"></div>
+        <div class="cella" id="9"></div>
+    </div>
+    <style>
+        .griglia {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(3, 100px);
+            gap: 5px;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .cella {
+            width: 100px;
+            height: 100px;
+            border: 2px solid #333;
+            font-size: 2rem;
+            text-align: center;
+            line-height: 100px;
+            cursor: pointer;
+            user-select: none;
+            background-color: #f2f2f2;
+            transition: background-color 0.2s ease;
+        }
+
+        .cella:hover {
+            background-color: #ddd;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
+    <script src="game_script.js"></script>
+</body>
+</html>

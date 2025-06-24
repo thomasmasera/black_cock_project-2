@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tris-Login</title>
+    <!--<script src="/js/index_script.js" defer></script>-->
+</head>
+<body>
+    <div>
+    <form id="login">
+        <h1>Benvenuto, accedi</h1>
+        <input id="login_username" type="text" placeholder="Username" required>
+        <input id="login_password" type="password" placeholder="Password" required>
+        <button class="btn_login" type="submit">Login</button>
+        <p class="register">Non hai un account? <a href="#">Registrati</a></p>
+    </form>
+
+    <!-- Form di registrazione nascosto -->
+    <form id="sign-up" style="display: none;">
+        <h2>Sign Up</h2>
+        <input id="signup_username" type="text" placeholder="Username" required>
+        <input id="signup_password" type="password" placeholder="Password" required>
+        <button class="btn_login" type="submit">Sign Up</button>
+        <p class="register">Hai già un account? <a href="#">Accedi</a></p>
+    </form>
+    </div>
+    <!-- <script>
+        document.querySelector('.register').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('sign-up').style.display = 'block';
+            
+        });
+    </script> -->
+    <script src="index_script.js"></script>
+    
+</body>
+</html>

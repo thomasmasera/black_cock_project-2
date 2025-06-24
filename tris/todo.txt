@@ -1,0 +1,2 @@
+inverire le robe per le api (ora fanno la roba opposta)
+capire come js interpreta le risposte perchè in console mi butta errore ma da network no
