@@ -2,7 +2,8 @@ package it.prato.tris.model;
 
 public class Move {
     private int cell;
-    private Status status; 
+    private Status status;
+    private String player;
 
     public int getCell() {
         return cell;
@@ -18,6 +19,14 @@ public class Move {
 
     public void setStatus(Status status){
         this.status = status;
+    }
+
+    public String getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(String player) {
+        this.player = player;
     }
 
     
