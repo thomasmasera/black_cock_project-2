@@ -4,8 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game</title>
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
+    <video class="sfondo" muted loop autoplay id="background-video">
+        <source src="img/video_sfondo_blu.mp4" type="video/mp4">
+        Il tuo browser non supporta i video HTML5.
+    </video>
+    <div class="container">
+        <h1 class="title">CYBER TRIS</h1>
     <div class="griglia">
         <div class="cella" id="1"></div>
         <div class="cella" id="2"></div>
@@ -17,32 +24,34 @@
         <div class="cella" id="8"></div>
         <div class="cella" id="9"></div>
     </div>
+    <button class="restart-btn" type="submit">Rigioca</button>
+    </div>
+
     <style>
-        .griglia {
-            display: grid;
-            grid-template-columns: repeat(3, 100px);
-            grid-template-rows: repeat(3, 100px);
-            gap: 5px;
-            justify-content: center;
-            margin-top: 50px;
-        }
-
-        .cella {
-            width: 100px;
-            height: 100px;
-            border: 2px solid #333;
-            font-size: 2rem;
-            text-align: center;
-            line-height: 100px;
-            cursor: pointer;
-            user-select: none;
-            background-color: #f2f2f2;
-            transition: background-color 0.2s ease;
-        }
-
-        .cella:hover {
-            background-color: #ddd;
-        }
+    .griglia {
+        display: grid;
+        grid-template-columns: repeat(3, 100px);
+        gap: 10px;
+        justify-content: center;
+    }
+    
+    .cella {
+        width: 100px;
+        height: 100px;
+        color: aliceblue;
+        background-color: #111;
+        border: 2px solid #007acca9;
+        font-size: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: background 0.2s;
+    }
+    
+    .cella:hover {
+        background-color: #222;
+    }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
