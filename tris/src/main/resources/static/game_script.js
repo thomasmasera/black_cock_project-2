@@ -117,6 +117,3 @@ function checkDraw() {
               .every(cella => cella.innerText !== "");
 }
 
-document.getElementById('.restart-btn').addEventListener('reset', function(e){
-    location.reload();
-});
