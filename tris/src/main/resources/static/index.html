@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tris-Login</title>
     <!--<script src="/js/index_script.js" defer></script>-->
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-    <div>
+    <video class="sfondo" muted loop autoplay id="background-video">
+        <source src="img/video_sfondo_blu.mp4" type="video/mp4">
+        Il tuo browser non supporta i video HTML5.
+    </video>
+
+    <div class="access">
     <form id="login">
         <h1>Benvenuto, accedi</h1>
         <input id="login_username" type="text" placeholder="Username" required>
