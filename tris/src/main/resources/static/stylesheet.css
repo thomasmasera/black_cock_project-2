@@ -1,6 +1,6 @@
 body {
   background-color: #181c2f;
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: GlitchGoblin;
   margin: 0;
   padding: 20px;
   display: flex;
@@ -159,4 +159,9 @@ input::placeholder {
 .restart-btn:hover {
   background: linear-gradient(90deg, #4f8cff 0%, #ffb86b 100%);
   color: #fff;
+}
+
+@font-face {
+  font-family: GlitchGoblin;
+  src: url(font/glitch-goblin-font/GlitchGoblin-2O87v.ttf);
 }
