@@ -10,7 +10,7 @@ import it.prato.tris.model.Move;
 @Controller
 public class SocketController {
     
-    @MessageMapping("/app/{roomId}")
+    @MessageMapping("/{roomId}")
 	@SendTo("/topic/game/{roomId}")
 	public Move move(Move move, @DestinationVariable String roomId) throws Exception {
 		return move;
