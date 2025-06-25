@@ -1,5 +1,5 @@
 body {
-  background-color: #f0f0f0;
+  background-color: #181c2f;
   font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
   padding: 20px;
@@ -10,13 +10,14 @@ body {
 }
 
 .title {
-    font-size: 3em;
-    text-shadow: 0 0 10px #007acca9;
-    margin-bottom: 20px;
+  font-size: 3em;
+  text-shadow: 0 0 10px #4f8cffcc;
+  margin-bottom: 20px;
+  color: #fff;
 }
 
 .container {
-    text-align: center;
+  text-align: center;
 }
 
 #background-video {
@@ -27,13 +28,14 @@ body {
   height: 100%;
   object-fit: cover;
   z-index: -1;
+  filter: brightness(0.7) blur(1px);
 }
 
 .access {
-  background: rgba(255, 255, 255, 0.88);
+  background: rgba(34, 40, 64, 0.92);
   padding: 40px 30px;
   border-radius: 18px;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
   max-width: 350px;
@@ -45,10 +47,11 @@ body {
 }
 
 .access h1, .access h2 {
-  color: #5b6ee1;
+  color: #4f8cff;
   margin-bottom: 24px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 1px;
+  text-shadow: 0 2px 8px #1a233b33;
 }
 
 form {
@@ -58,97 +61,102 @@ form {
   align-items: center;
 }
 
-input[type="text"], input[type="password"] {
+input[type="text"], input[type="password"], .input-codice-partita {
   width: 90%;
   padding: 12px 14px;
   margin: 10px 0;
-  border: 1.5px solid #d1d5db;
+  border: 1.5px solid #4f8cff;
   border-radius: 8px;
-  background: #f7f8fa;
+  background: #23294a;
   font-size: 1rem;
-  color: #333;
-  transition: border-color 0.2s, box-shadow 0.2s;
-  box-shadow: 0 2px 8px 0 rgba(91, 110, 225, 0.06);
+  color: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+  box-shadow: 0 2px 8px 0 rgba(79, 140, 255, 0.08);
 }
 
-input[type="text"]:focus, input[type="password"]:focus {
-  border-color: #7f53ac;
+input[type="text"]:focus, input[type="password"]:focus, .input-codice-partita:focus {
+  border-color: #ffb86b;
   outline: none;
-  box-shadow: 0 0 0 2px #e0d7f8;
+  background: #2d355a;
+  box-shadow: 0 0 0 2px #ffb86b44;
+}
+
+.input-codice-partita {
+  width: 60%;
+  font-size: 0.98rem;
+  padding: 10px 12px;
+  background: #23294a;
+  color: #fff;
+  border: 1.5px solid #4f8cff;
+  border-radius: 6px;
+  margin: 10px 0;
+}
+
+.input-codice-partita::placeholder {
+  color: #b3c6ff;
+  opacity: 1;
+}
+
+input::placeholder {
+  color: #b3c6ff;
+  opacity: 1;
 }
 
 .btn_login, .join_new_lobby, .join_ex_lobby {
   padding: 12px 0;
   width: 90%;
-  background-color: #5b6ee1;
+  background: linear-gradient(90deg, #4f8cff 0%, #6c63ff 100%);
   color: #fff;
   border: none;
   border-radius: 8px;
   font-size: 1.1rem;
-  font-weight: 500;
+  font-weight: 600;
   margin-top: 18px;
   margin-bottom: 10px;
-  transition: background-color 0.3s, transform 0.2s;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
   cursor: pointer;
-  box-shadow: 0 2px 8px 0 rgba(91, 110, 225, 0.10);
+  box-shadow: 0 2px 8px 0 rgba(79, 140, 255, 0.15);
 }
 
-.btn_login:hover {
-  background-color: #7f53ac;
-  color: #f3f3f3;
+.btn_login:hover, .join_new_lobby:hover, .join_ex_lobby:hover {
+  background: linear-gradient(90deg, #ffb86b 0%, #4f8cff 100%);
+  color: #23294a;
   transform: scale(1.04);
+  box-shadow: 0 4px 16px 0 rgba(255, 184, 107, 0.18);
 }
 
 .register {
   font-size: 0.97rem;
-  color: #555;
+  color: #b3c6ff;
   margin-top: 8px;
 }
 
 .register a {
-  color: #5b6ee1;
+  color: #ffb86b;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s;
 }
 
 .register a:hover {
-  color: #7f53ac;
+  color: #fff;
   text-decoration: underline;
 }
 
-.input-codice-partita {
-  width: 60%;
-  padding: 8px 10px;
-  margin: 10px 0;
-  border: 1.5px solid #bfc6e0;
-  border-radius: 6px;
-  background: #f4f6fb;
-  font-size: 0.98rem;
-  color: #333;
-  transition: border-color 0.2s, box-shadow 0.2s;
-  box-shadow: 0 1px 4px 0 rgba(91, 110, 225, 0.05);
-}
-.input-codice-partita:focus {
-  border-color: #5b6ee1;
-  outline: none;
-  box-shadow: 0 0 0 2px #e0d7f8;
-}
-.input-codice-partita::placeholder {
-  color: #999;
+.restart-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #ffb86b 0%, #4f8cff 100%);
+  color: #23294a;
+  border: none;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.2s;
+  box-shadow: 0 2px 8px 0 rgba(255, 184, 107, 0.10);
 }
 
-.restart-btn {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #007acca9;
-    color: black;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-  
 .restart-btn:hover {
-    background-color: #007acca9;
+  background: linear-gradient(90deg, #4f8cff 0%, #ffb86b 100%);
+  color: #fff;
 }
