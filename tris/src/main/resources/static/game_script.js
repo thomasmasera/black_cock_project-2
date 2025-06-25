@@ -116,4 +116,3 @@ function checkDraw() {
   return Array.from(document.querySelectorAll('.cella'))
               .every(cella => cella.innerText !== "");
 }
-
