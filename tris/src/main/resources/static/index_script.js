@@ -2,9 +2,11 @@ console.log("JS caricato!");
 
 document.querySelector('.register').addEventListener('click', function(e) {
   e.preventDefault();
-  document.getElementById('sign-up').style.display = 'block';
+  document.getElementById('login').style.display = 'none';
+  document.getElementById('sign-up').style.display = 'flex';
             
 });
+
 
 document.getElementById('login').addEventListener('submit', function(e) {
   console.log("login intercettato");
