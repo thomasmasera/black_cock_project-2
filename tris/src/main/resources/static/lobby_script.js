@@ -2,7 +2,8 @@ console.log("JS lobby caricato");
 
 document.querySelector('.swap').addEventListener('click', function(e){
     e.preventDefault();
-    document.getElementById('new_lobby').style.display = 'block';
+    document.getElementById('existing_lobby').style.display = 'none';
+    document.getElementById('new_lobby').style.display = 'flex';
 });
 
 document.getElementById('existing_lobby').addEventListener('submit', function(e){
