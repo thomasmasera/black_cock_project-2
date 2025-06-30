@@ -7,6 +7,38 @@ document.querySelector('.register').addEventListener('click', function(e) {
             
 });
 
+// QUESTo è l'import di un componente React per il testo glitch
+import './GlitchText.css';
+
+const GlitchText = ({
+  children,
+  speed = 1,
+  enableShadows = true,
+  enableOnHover = true,
+  className = '',
+}) => {
+  const inlineStyles = {
+    '--after-duration': `${speed * 3}s`,
+    '--before-duration': `${speed * 2}s`,
+    '--after-shadow': enableShadows ? '-5px 0 red' : 'none',
+    '--before-shadow': enableShadows ? '5px 0 cyan' : 'none',
+  };
+
+  const hoverClass = enableOnHover ? 'enable-on-hover' : '';
+
+  return (
+    <div
+      className={`glitch ${hoverClass} ${className}`}
+      style={inlineStyles}
+      data-text={children}
+    >
+      {children}
+    </div>
+  );
+};
+
+export default GlitchText;
+// fino a qui è l'import di un componente React per il testo glitch
 
 document.getElementById('login').addEventListener('submit', function(e) {
   console.log("login intercettato");
@@ -87,4 +119,5 @@ document.getElementById('sign-up').addEventListener('submit', function(e) {
     .catch(error => {
         console.error('Errore', error.message);
     });
+    
 });
